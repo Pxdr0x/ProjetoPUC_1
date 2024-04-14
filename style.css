@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------- Navigation Bar -------------------------------------- */
+
+a, a:hover {
+    text-decoration: none;
+}
+nav {
+    background: #222;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav a {
+    color: #fff;
+}
+nav a:hover {
+    color: #ef4b3f;
+}
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.logo {
+    flex: 1;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.logo a:hover {
+    color: #fff;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li {
+    padding: 15px 10px;
+    font-size: 16px;
+}
+.toggle {
+    font-size: 30px;
+    display: none;
+}
+
+/* --------------------------------- Navigation Bar - Finalizado! -------------------------------------- */
+
+/* ------------------------------------- Perfil ------------------------------------------- */ 
+
+.Perfil {
+    position: relative;
+    display: flex;
+    padding: 10px;
+}
+.Perfil img {
+    width: 80%;
+    height: 80%;
+}
+.Info {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+}
+.Info span {
+    color: #20a6ff;
+}
+.Social {
+    position: absolute;
+    margin-left: 390px;
+    margin-top: 150px;
+}
+.Social > i {
+    padding: 10px;
+}
+.Followers {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 100px;
+}
+
+/* ------------------------------------- Perfil - Finalizado! ------------------------------------------- */ 
+
+#Card-Repo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.Card {
+    width: 225px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 15px;
+}
+.Card img {
+    width: 100%;
+    height: auto;
+}
+.repo-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.repo-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.repo-content .btn1 {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+/* ------------------------------------- Carrossel ------------------------------------------- */
+
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+
+}
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+.slide {
+    width: 25%;
+    position: relative;
+
+}
+.slide img {
+    width: 800px;
+}
+.manual-nav {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover {
+    background-color: white;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+.nav-auto div {
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.nav-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+#radio1:checked ~ .nav-auto .auto-btn1 {
+    background-color: white;
+}
+#radio2:checked ~ .nav-auto .auto-btn2 {
+    background-color: white;
+}
+#radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: white;
+}
+#radio4:checked ~ .nav-auto .auto-btn4 {
+    background-color: white;
+}
+
+/* ------------------------------------- Carrossel (Tratar) ------------------------------------------- */
+
+/* ------------------------------------- Card People ------------------------------------------- */
+
+#Card-people {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.card {
+    width: 225px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 15px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.card-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+/* ------------------------------------- Card People - Finalizado!------------------------------------------- */
+
+/* ------------------------------- Media Querry ----------------------------------------- */ 
+@media screen and (max-width: 600px) {
+    nav {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }
+    .menu {
+        margin-top: 15px;
+        display: none;
+    }
+}
+/* ------------------------------- Media Querry (?) ----------------------------------------- */
+
